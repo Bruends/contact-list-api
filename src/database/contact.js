@@ -2,42 +2,22 @@ const Contact = require('./contactModel');
 
 module.exports = {
   find: name => {
-    try {
-      return Contact.findOne({ name: name });
-    } catch (error) {
-      return error;
-    }
+    return Contact.findOne({ name: name });
   },
 
   all: () => {
-    try {
-      return Contact.find();
-    } catch (error) {
-      return error;
-    }
+    return Contact.find();
   },
 
   save: contact => {
-    try {
-      return Contact.create(contact);
-    } catch (error) {
-      return error;
-    }
+    return Contact.create(contact);
   },
 
   update: contact => {
-    try {
-      return Contact.update(contact);
-    } catch (error) {
-      return error;
-    }
+    return Contact.findOne({ _id: contact._id }).update(contact);
   },
 
   del: id => {
-    try {
-      return Contact.findOne({ id: id }).remove();
-    } catch (error) {
-      return error;
-    }
+    return Contact.findOne({ _id: id }).remove();
   }
 };
