@@ -1,5 +1,6 @@
 const Contact = require('./contactModel');
 
+// funções CRUD
 module.exports = {
   find: name => {
     return Contact.findOne({ name: name });

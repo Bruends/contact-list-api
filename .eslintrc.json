@@ -1,3 +1,7 @@
 {
-  "extends": "semistandard"
+  "extends": "semistandard",
+  "env": {
+    "node": true,
+    "jest": true
+  }
 }
