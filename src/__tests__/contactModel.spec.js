@@ -2,7 +2,7 @@ const ContactModel = require('../database/contactModel');
 
 describe('contact model', () => {
   it('should not return an error when a valid contact is used', () => {
-    const validContact = new ContactModel({name: 'bruno', phone: '1234-1234', email: 'test@email.com'});
+    const validContact = new ContactModel({ name: 'bruno', phone: '1234-1234', email: 'test@email.com' });
 
     validContact.validate((err) => {
       expect(err).toBeNull();
@@ -10,7 +10,7 @@ describe('contact model', () => {
   });
 
   it('should return an error when contact doesnt have a name', () => {
-    const invalidContact = new ContactModel({phone: '1234-1234', email: 'test@email.com'});
+    const invalidContact = new ContactModel({ phone: '1234-1234', email: 'test@email.com' });
 
     invalidContact.validate((err) => {
       expect(err).not.toBeNull();
@@ -18,7 +18,7 @@ describe('contact model', () => {
   });
 
   it('should return an error if contact have an invalid email', () => {
-    const invalidContact = new ContactModel({name: 'bruno', email: 'xxxxxxx'});
+    const invalidContact = new ContactModel({ name: 'bruno', email: 'xxxxxxx' });
 
     invalidContact.validate((err) => {
       expect(err).not.toBeNull();

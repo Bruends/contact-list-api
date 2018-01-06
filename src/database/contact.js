@@ -2,23 +2,13 @@ const Contact = require('./contactModel');
 
 // funções CRUD
 module.exports = {
-  find: name => {
-    return Contact.findOne({ name: name });
-  },
+  find: name => Contact.findOne({ name }),
 
-  all: () => {
-    return Contact.find();
-  },
+  all: () => Contact.find(),
 
-  save: contact => {
-    return Contact.create(contact);
-  },
+  save: contact => Contact.create(contact),
 
-  update: contact => {
-    return Contact.findOne({ _id: contact._id }).update(contact);
-  },
+  update: contact => Contact.findOne({ _id: contact._id }).update(contact),
 
-  del: id => {
-    return Contact.findOne({ _id: id }).remove();
-  }
+  del: id => Contact.findOne({ _id: id }).remove(),
 };

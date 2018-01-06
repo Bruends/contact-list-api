@@ -8,10 +8,10 @@ const contactSchema = new mongoose.Schema({
   cell_phone: String,
   email: {
     type: String,
-    validate: [isEmail, 'Please use a valid email']
+    validate: [isEmail, 'Please use a valid email'],
   },
   twitter: String,
-  facebook: String
+  facebook: String,
 });
 
 const Contact = mongoose.model('Contact', contactSchema);
