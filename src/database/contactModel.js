@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('../config/database');
 const { isEmail } = require('validator');
 
 const contactSchema = new mongoose.Schema({
