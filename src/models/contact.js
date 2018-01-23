@@ -3,12 +3,11 @@ const { isEmail } = require('validator');
 
 const contactSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  photo: String,
   phone: String,
   cell_phone: String,
   email: {
     type: String,
-    validate: [isEmail, 'Please use a valid email'],
+    validate: [isEmail, 'Invalid Email !'],
   },
   twitter: String,
   facebook: String,

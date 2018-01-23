@@ -1,5 +1,6 @@
+const port = 3000;
 const app = require('./config/server');
 
-app.listen(5000, () => {
-  console.log('server on: localhost:5000');
+app.listen(port, () => {
+  console.log(`server on: localhost:${port}`);
 });

@@ -1,4 +1,4 @@
-const ContactModel = require('../database/contactModel');
+const ContactModel = require('../../models/contact');
 
 describe('contact model', () => {
   it('should not return an error when a valid contact is used', () => {

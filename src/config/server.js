@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const router = require('../routes/routes');
+const contactRoutes = require('../routes/routes');
 
 const app = express();
 app.use(bodyParser.json());
@@ -15,6 +15,6 @@ app.use((req, res, next) => {
 });
 
 // rotas
-app.use('/api', router);
+app.use('/api', contactRoutes);
 
 module.exports = app;
