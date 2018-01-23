@@ -1,7 +1,8 @@
-const contactModel = require('../models/contact');
+const defaultContactModel = require('../models/contact');
 
 // funções CRUD
-module.exports = {
+// recebe o model por parametro para facilitar a escrita de testes
+module.exports = (contactModel = defaultContactModel) => ({
   find: async (req, res) => {
     try {
       // separando nome
@@ -56,4 +57,4 @@ module.exports = {
       res.status(400).send({ error: 'Error on deleting contact' });
     }
   },
-};
+});

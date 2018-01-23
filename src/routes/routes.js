@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const contactController = require('../controllers/contact');
+const contactController = require('../controllers/contact')();
 
 router.get('/contact/:name', async (req, res) => {
   await contactController.find(req, res);
