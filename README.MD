@@ -19,7 +19,7 @@ return all contacts:
 > GET  &nbsp;&nbsp; /api/contact
 
 return contacts with name:
-> GET &nbsp;&nbsp; /api/contact/name=<contact name>
+> GET &nbsp;&nbsp; /api/contact/name=contactName>
 
 add a new contact: 
 > POST &nbsp;&nbsp; /api/contact 
@@ -28,7 +28,7 @@ modify contact:
 > PUT &nbsp;&nbsp; /api/contact
 
 delete contact
-> DELETE &nbsp;&nbsp; /api/contact/id=<contact id>
+> DELETE &nbsp;&nbsp; /api/contact/id=contactId
 
 ### contact format
 
