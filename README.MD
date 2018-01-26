@@ -19,7 +19,7 @@ return all contacts:
 > GET  &nbsp;&nbsp; /api/contact
 
 return contacts with name:
-> GET &nbsp;&nbsp; /api/contact/name=contactName>
+> GET &nbsp;&nbsp; /api/contact/name=contactName
 
 add a new contact: 
 > POST &nbsp;&nbsp; /api/contact 
