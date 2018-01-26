@@ -17,7 +17,7 @@ module.exports = (contactModel = defaultContactModel) => ({
   all: async (req, res) => {
     try {
       const contacts = await contactModel.find();
-      return res.status(200).send(contacts);
+      return res.send(contacts);
     } catch (error) {
       return res.status(400).send({ error: 'Error on getting contacts' });
     }

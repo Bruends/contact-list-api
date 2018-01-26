@@ -1,6 +1,6 @@
 const ContactModel = require('../../models/contact');
 
-describe('contact model', () => {
+describe.skip('contact model', () => {
   it('should not return an error when a valid contact is used', () => {
     const validContact = new ContactModel({ name: 'bruno', phone: '1234-1234', email: 'test@email.com' });
 
