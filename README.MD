@@ -8,7 +8,7 @@ first check if you have `node > 8` and `mongodb` installed
 then install the dependencies with: 
 `yarn` or `npm install`
 
-and the server use one of the commands:
+and start the server with one of the commands:
 `yarn start` or `npm start`
 
 the server will listen in `localhost:3000`
@@ -32,7 +32,7 @@ delete contact
 
 ### contact format
 
-```json
+```
 {
     _id: String (required only on PUT),
     name: String (required),
